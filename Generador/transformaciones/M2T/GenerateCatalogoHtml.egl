@@ -1,0 +1,362 @@
+[%
+var imgH:String;
+var imgW:String;
+var banner:String;
+imgH='300px';
+imgW='200px';
+for(vista in view!View.all){
+for(pagina in vista.select(x|x.tipoPagina='Catalogo')){
+if(pagina.image.name=='small'){imgH='50px';  imgW='50px';}
+if(pagina.tipo=='basico'){banner='none';}
+
+%]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/4-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+          body { background:[%=pagina.background%] ;
+                 color:[%=pagina.font%]; }
+                
+         a{color:[%=pagina.font%];}
+         #small{color:[%=pagina.font%];}
+         img{
+         height:[%=imgH%]; width:[%=imgW%];
+         }
+         #banner{display:[%=banner%];}
+        </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color:">Catalogo</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" style="color:">Promocion</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:">Mapas</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+   
+ <hr>
+   <img id="banner" style="height:300px; width:200px;" src='HtmlMetamodel/images/img5.jpg'/>
+
+<hr>
+
+    <!-- Page Content -->
+    <div class="container">
+<!-- Page Heading -->
+        <div class="row">
+            <div class="row">
+                <h1 class="page-header"><p >Nuestros Productos
+                    </p><small id="small" >[%=vista.eContainer().name%]</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+[%
+
+switch(vista.page){
+case 'empresarial':
+for(row in vista.filas){
+%]
+        <!-- Projects Row -->
+        <div class="row">
+        [%
+        for(col in row.columnas){
+        
+        %]
+            <div class="col-md-3 portfolio-item">
+          
+                <a href="#">
+                    <img class="img-responsive" src="images/images.jpeg" alt=""  />
+                </a>
+                <span>precio</span>
+               <div class="checkbox">
+               <label>
+               <input type="checkbox" value="">
+                agregar al carrito
+               </label>
+                </div>
+               
+                 </div>
+                [%
+                }
+                %]
+           
+</div>
+[%
+}
+case 'moderno':
+for(row in vista.filas){
+%]
+  <!-- Projects Row -->
+        
+        [%
+        for(col in row.columnas){
+        
+        %]
+        <table align='center'>
+        <tr class="row">
+            <td class="col-md-5">
+                <a href="#">
+                    <img class="img-responsive" src="images/img5.jpg" alt="" height='50' width='50' />
+                </a>
+            </td>
+            <td class="col-md-3">
+           
+                <h4>Precio</h4>
+               
+                </td>
+            <td class="col-md-3">
+            <div class="checkbox">
+       <label>
+       <input type="checkbox" value="">
+        agregar al carrito
+        </label>
+         </div>
+                </td>
+                     
+        
+</tr>
+</table>
+                  <hr>
+       </p>   
+                   
+                [%
+                }
+                %]
+     
+[%
+}
+case 'clasico':
+for(row in vista.filas){
+%]
+        <!-- Projects Row -->
+        <div  style="overflow-x: scroll;">
+        <table>
+        <tr class="row">
+        [%
+        for(col in row.columnas){
+        
+        %]
+            <td class="col-md-3 portfolio-item" >
+          
+                <a href="#">
+                    <img  src="images/images.jpeg" alt=""  />
+                </a>
+               
+                 </td>
+                [%
+                }
+                %]
+       </tr>         
+   </table>        
+</div>
+[%
+}
+%]
+<div class="container">
+  <form class="form-horizontal" role="form">
+    <fieldset>
+      <legend>Payment</legend>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-number">Card Number</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-xs-3">
+              <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                <option>Month</option>
+                <option value="01">Jan (01)</option>
+                <option value="02">Feb (02)</option>
+                <option value="03">Mar (03)</option>
+                <option value="04">Apr (04)</option>
+                <option value="05">May (05)</option>
+                <option value="06">June (06)</option>
+                <option value="07">July (07)</option>
+                <option value="08">Aug (08)</option>
+                <option value="09">Sep (09)</option>
+                <option value="10">Oct (10)</option>
+                <option value="11">Nov (11)</option>
+                <option value="12">Dec (12)</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control" name="expiry-year">
+                <option value="13">2013</option>
+                <option value="14">2014</option>
+                <option value="15">2015</option>
+                <option value="16">2016</option>
+                <option value="17">2017</option>
+                <option value="18">2018</option>
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <button type="button" class="btn btn-success">Pay Now</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+[%
+case 'profesional':
+for(row in vista.filas){
+%]
+        <!-- Projects Row -->
+        <div class="row">
+        [%
+        for(col in row.columnas){
+        
+        %]
+            <div class="col-md-3 portfolio-item">
+          
+                <a href="#">
+                    <img class="img-responsive" src="images/images.jpeg" alt=""  />
+                </a>
+               
+                 </div>
+                [%
+                }
+                %]
+           
+</div>
+[%
+}
+
+
+
+}
+
+%]
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" style="color:">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" style="color:">1</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:">2</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:">3</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:">4</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:">5</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="color:">Auto</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+split--
+[%
+}
+}
+%]

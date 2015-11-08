@@ -1,0 +1,67 @@
+[% 
+	var promocion:Template:=TemplateFactory.load('GeneratePromocionHtml.egl');
+	var catalogo:Template:=TemplateFactory.load('GenerateCatalogoHtml.egl');
+	var contacto:Template:=TemplateFactory.load('GenerateContactoHtml.egl');
+	var mapa:Template:=TemplateFactory.load('GenerateMapaHtml.egl');
+	var index:Template:=TemplateFactory.load('GenerateIndex.egl');
+	var contador:Integer;
+	var paginas:Sequence;
+	var url:String;
+	contador=0;      
+	
+	paginas=promocion.process().split('split--');
+    
+	
+	while(contador< paginas.size-1){
+	
+	url=url+'<a href="Promociones'+contador+'.html">Promocion'+contador+'</a><p>';
+	
+	var stringPromo:Template:=TemplateFactory.prepare(paginas[contador].toString());
+	stringPromo.generate('webApplication/Promociones'+contador+'.html');
+	contador=contador+1;
+	}
+	var linkPromociones:Template:=TemplateFactory.prepare(url);
+	linkPromociones.generate('links/promolink.egl');
+	url='';
+	paginas=catalogo.process().split('split--');
+	contador=0;
+	while(contador< paginas.size-1){
+	
+	url=url+'<a href="Catalogo'+contador+'.html">Catalogo'+contador+'</a><p>';
+	var stringCatalogo:Template:=TemplateFactory.prepare(paginas[contador].toString());
+	stringCatalogo.generate('webApplication/Catalogo'+contador+'.html');
+	contador=contador+1;
+	}
+	var linkCatalogos:Template:=TemplateFactory.prepare(url);
+	linkCatalogos.generate('links/catalogolink.egl');
+	url='';
+	paginas=contacto.process().split('split--');
+	contador=0;
+	while(contador< paginas.size-1){
+	
+	url=url+'<a href="Contacto'+contador+'.html">Contacto'+contador+'</a><p>';
+	
+	var stringContacto:Template:=TemplateFactory.prepare(paginas[contador].toString());
+	stringContacto.generate('webApplication/Contacto'+contador+'.html');
+	contador=contador+1;
+	}
+	var linkContactos:Template:=TemplateFactory.prepare(url);
+	linkContactos.generate('links/contactolink.egl');
+	url='';
+	paginas=mapa.process().split('split--');
+	contador=0;
+	while(contador< paginas.size-1){
+	
+	url=url+'<a href="Mapa'+contador+'.html">Mapa'+contador+'</a><p>';
+	
+	var stringMapa:Template:=TemplateFactory.prepare(paginas[contador].toString());
+	stringMapa.generate('webApplication/Mapa'+contador+'.html');
+	contador=contador+1;
+	}
+	url.toString().println();
+	var linkMapas:Template:=TemplateFactory.prepare(url);
+	linkMapas.generate('links/mapalink.egl');
+	url='';
+	index.generate('webApplication/index.html');
+	
+%]

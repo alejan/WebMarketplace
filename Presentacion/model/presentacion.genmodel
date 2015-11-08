@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Presentacion/src" modelPluginID="Presentacion"
+    modelName="Presentacion" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>presentacion.ecore</foreignModel>
+  <genPackages prefix="Presentacion" disposableProviderFactory="true" ecorePackage="presentacion.ecore#/">
+    <genClasses ecoreClass="presentacion.ecore#//Presentation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference presentacion.ecore#//Presentation/layouts"/>
+    </genClasses>
+    <genClasses ecoreClass="presentacion.ecore#//Layout">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference presentacion.ecore#//Layout/containers"/>
+    </genClasses>
+    <genClasses ecoreClass="presentacion.ecore#//Grid"/>
+    <genClasses ecoreClass="presentacion.ecore#//Vertical"/>
+    <genClasses ecoreClass="presentacion.ecore#//Horizontal"/>
+    <genClasses ecoreClass="presentacion.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute presentacion.ecore#//Container/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute presentacion.ecore#//Container/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute presentacion.ecore#//Container/atributo"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

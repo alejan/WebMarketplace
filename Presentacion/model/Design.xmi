@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<presentacion:Design xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:presentacion="http://www.example.org/presentacion" name="pepo">
+  <views xsi:type="presentacion:Layout" name="paguee" page="empresarial" image="large" font="black" tipo="basico" tipoPagina="Promocion">
+    <filas>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+    </filas>
+    <filas>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+    </filas>
+    <filas>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+    </filas>
+  </views>
+  <views xsi:type="presentacion:Layout" name="contact" page="empresarial" image="large" font="black" tipo="basico" tipoPagina="Contacto"/>
+  <views xsi:type="presentacion:Layout" page="empresarial" image="large" font="black" tipo="basico" tipoPagina="Contacto"/>
+  <views xsi:type="presentacion:Layout" page="empresarial" image="large" font="black" tipo="basico" tipoPagina="Catalogo">
+    <filas>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+    </filas>
+    <filas>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+    </filas>
+    <filas>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+      <columnas/>
+    </filas>
+  </views>
+  <views xsi:type="presentacion:Layout" page="empresarial" image="large" font="black" tipo="basico" tipoPagina="Mapa"/>
+</presentacion:Design>

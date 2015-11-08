@@ -5,45 +5,29 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="paginas" lowerBound="1"
         upperBound="-1" eType="#//Pagina" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentacion" eType="#//TipoPresentacion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pagina" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="colorFuente" eType="#//Color"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout" eType="#//Layout"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="colorFondo" eType="#//Color"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estilo" eType="#//Estilo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Promocion" eSuperTypes="#//Pagina">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieneBanner" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estilo" eType="#//EstiloImagen"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Promocion" eSuperTypes="#//Pagina"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mapa" eSuperTypes="#//Pagina"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Contacto" eSuperTypes="#//Pagina"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Catalogo" eSuperTypes="#//Pagina"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Estilo">
+    <eLiterals name="empresarial"/>
+    <eLiterals name="clasico"/>
+    <eLiterals name="moderno"/>
+    <eLiterals name="profesional"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Mapa" eSuperTypes="#//Pagina">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ubicacionActual" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="buscarUbicacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Contacto" eSuperTypes="#//Pagina">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieneNombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieneEmail" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Catalogo" eSuperTypes="#//Pagina">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieneBanner" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tienePrecio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estiloImagen" eType="#//EstiloImagen"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoPresentacion">
+    <eLiterals name="basico"/>
+    <eLiterals name="premium"/>
+    <eLiterals name="gold"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EstiloImagen">
-    <eLiterals name="small"/>
-    <eLiterals name="large"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Color">
-    <eLiterals name="blanco"/>
-    <eLiterals name="negro"/>
-    <eLiterals name="azul"/>
-    <eLiterals name="verde"/>
-    <eLiterals name="rojo"/>
-    <eLiterals name="gris"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Layout">
-    <eLiterals name="grid"/>
-    <eLiterals name="vertical"/>
-    <eLiterals name="horizontal"/>
+    <eLiterals name="compacta"/>
+    <eLiterals name="completa"/>
   </eClassifiers>
 </ecore:EPackage>

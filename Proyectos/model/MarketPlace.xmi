@@ -1,43 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
-<proyectos:MarketPlace
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:proyectos="http://www.example.org/proyectos"
-    nombre="Pepe Ganga">
-  <paginas xsi:type="proyectos:Promocion"
-      nombre="Pague 1 y lleve 2"
-      colorFuente="verde"
-      tieneBanner="true"/>
-  <paginas xsi:type="proyectos:Mapa"
-      nombre="ubicacion1"/>
-  <paginas xsi:type="proyectos:Contacto"
-      nombre="tienda"/>
-  <paginas xsi:type="proyectos:Catalogo"
-      nombre="productos2"/>
-  <paginas xsi:type="proyectos:Promocion"
-      nombre="yoyo"
-      colorFuente="azul"
-      colorFondo="rojo"/>
-  <paginas xsi:type="proyectos:Promocion"
-      nombre="kilo"
-      colorFuente="verde"
-      layout="vertical"
-      colorFondo="azul"/>
-  <paginas xsi:type="proyectos:Promocion"
-      nombre="plo"
-      colorFuente="azul"
-      colorFondo="gris"/>
-  <paginas xsi:type="proyectos:Catalogo"
-      nombre="productos"/>
-  <paginas xsi:type="proyectos:Contacto"
-      nombre="tienda1"/>
-  <paginas xsi:type="proyectos:Mapa"
-      nombre="ubicacion"/>
-  <paginas xsi:type="proyectos:Catalogo"
-      nombre="productos1"/>
-  <paginas xsi:type="proyectos:Promocion"
-      nombre="pok"
-      colorFuente="gris"
-      colorFondo="azul"/>
+<proyectos:MarketPlace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:proyectos="http://www.example.org/proyectos" nombre="pepo">
+  <paginas xsi:type="proyectos:Promocion" nombre="paguee"/>
+  <paginas xsi:type="proyectos:Contacto" nombre="contact"/>
+  <paginas xsi:type="proyectos:Contacto"/>
+  <paginas xsi:type="proyectos:Catalogo"/>
+  <paginas xsi:type="proyectos:Mapa"/>
 </proyectos:MarketPlace>
