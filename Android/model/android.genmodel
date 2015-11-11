@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Android/src" modelPluginID="Android" modelName="Android"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    copyrightFields="false" importOrganizing="true">
+  <foreignModel>android.ecore</foreignModel>
+  <genPackages prefix="Android" disposableProviderFactory="true" ecorePackage="android.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="android.ecore#//Color">
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//Color/gray"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//Color/black"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//Color/white"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="android.ecore#//ImgSize">
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ImgSize/small"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ImgSize/large"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="android.ecore#//Layout">
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//Layout/horizontal"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//Layout/vertical"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//Layout/grid"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="android.ecore#//ObjectType">
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ObjectType/banner"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ObjectType/currentUbication"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ObjectType/searchUbication"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ObjectType/email"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ObjectType/price"/>
+      <genEnumLiterals ecoreEnumLiteral="android.ecore#//ObjectType/description"/>
+    </genEnums>
+    <genClasses ecoreClass="android.ecore#//Application">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference android.ecore#//Application/activity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//Application/name"/>
+    </genClasses>
+    <genClasses ecoreClass="android.ecore#//Activity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference android.ecore#//Activity/fragments"/>
+    </genClasses>
+    <genClasses ecoreClass="android.ecore#//Fragment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//Fragment/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//Fragment/background"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//Fragment/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//Fragment/imageSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference android.ecore#//Fragment/objetos"/>
+    </genClasses>
+    <genClasses ecoreClass="android.ecore#//CatalogFragment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//CatalogFragment/layout"/>
+    </genClasses>
+    <genClasses ecoreClass="android.ecore#//MapFragment"/>
+    <genClasses ecoreClass="android.ecore#//PromoFragment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//PromoFragment/layout"/>
+    </genClasses>
+    <genClasses ecoreClass="android.ecore#//ContactoFragment"/>
+    <genClasses ecoreClass="android.ecore#//FragmentObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute android.ecore#//FragmentObject/tipe"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

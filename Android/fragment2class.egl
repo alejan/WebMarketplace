@@ -1,0 +1,13 @@
+[%
+
+//for(app in android!Application.all){
+
+//	for(frag in app.activity.fragments){
+		%]
+		Fragment [%=fragm.name%]
+		[%
+//	}
+//}
+
+%]
+

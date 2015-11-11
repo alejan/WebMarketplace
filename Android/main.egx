@@ -1,0 +1,38 @@
+rule PromoFragment2Java
+  transform fragm : android!PromoFragment {
+
+  template : 'fragment2class.egl'
+
+  target : 'gen/ ' + fragm.name + '.java'
+  
+}
+
+rule CatalogFragment2Java
+  transform fragm : android!CatalogFragment {
+
+  template : 'fragment2class.egl'
+
+  target : 'gen/ ' + fragm.name + '.java'
+  
+}
+
+rule MapFragment2Java
+  transform fragm : android!MapFragment {
+
+  template : 'fragment2class.egl'
+
+  target : 'gen/ ' + fragm.name + '.java'
+  
+}
+
+rule ContactoFragment2Java
+  transform fragm : android!ContactoFragment {
+
+  template : 'fragment2class.egl'
+
+  target : 'gen/ ' + fragm.name + '.java'
+  
+}
+
+
+

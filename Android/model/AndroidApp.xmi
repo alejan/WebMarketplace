@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<android:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://www.example.org/android" name="Domicilios">
+  <activity name="MainActivity">
+    <fragments xsi:type="android:PromoFragment" font="gold" background="black" name="PromoFragment1" imageSize="large" layout="vertical">
+      <objects/>
+    </fragments>
+    <fragments xsi:type="android:MapFragment" font="gold" background="black" name="MapFragment1" imageSize="large">
+      <objects type="currentUbication"/>
+    </fragments>
+    <fragments xsi:type="android:PromoFragment" font="gold" background="black" name="PromoFragment2" imageSize="large" layout="vertical">
+      <objects/>
+    </fragments>
+    <fragments xsi:type="android:ContactoFragment" font="gold" background="black" name="ContactFragment1" imageSize="large">
+      <objects type="email"/>
+    </fragments>
+    <fragments xsi:type="android:CatalogFragment" font="gold" background="black" name="CatalogFragment1" imageSize="large" layout="vertical">
+      <objects/>
+      <objects type="price"/>
+    </fragments>
+  </activity>
+</android:Application>

@@ -1,0 +1,20 @@
+[% 
+	var a:Template:=TemplateFactory.load('GenerateClasses.egl');
+	var d:Integer;
+	var c:Sequence;
+	d=0;
+	
+	c=a.process().split('split--');
+	c[0].println();
+	while(d< c.size-1){
+	
+	var e:Template:=TemplateFactory.prepare(c[d].toString());
+	e.generate('Promociones'+d+'.java');
+	d=d+1;
+	}
+	
+	
+	
+	
+	
+%]
