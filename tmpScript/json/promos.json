@@ -1,0 +1,28 @@
+{
+  "promociones": [
+    {
+      "imagen": "http://www.couponforshopping.com/wp-content/uploads/2014/12/apple-coupon-codes.jpg",
+      "nombre": "25% off iPad",
+      "descripcion": "Aprovecha los descuentos!",
+      "terminos": "Del 11 al 30 de Septiembre del 2015",
+      "passUrl": "http://www.google.com",
+      "detalleUrl": "http://www.google.com"
+    },
+    {
+      "imagen": "http://orig10.deviantart.net/984c/f/2013/160/4/1/apple_coupon_by_aderic-d68cq39.jpg",
+      "nombre": "100% off",
+      "descripcion": "Aprovecha los descuentos!",
+      "terminos": "Del 11 al 30 de Septiembre del 2015",
+      "passUrl": "http://www.google.com",
+      "detalleUrl": "http://www.google.com"
+    },
+    {
+      "imagen": "http://www.letsgodigital.org/pictures/apple/store/apple-store.jpg",
+      "nombre": "Todo en promo!",
+      "descripcion": "Aprovecha los descuentos!",
+      "terminos": "Del 11 al 30 de Septiembre del 2015",
+      "passUrl": "http://www.google.com",
+      "detalleUrl": "http://www.google.com"
+    }
+  ]
+}
