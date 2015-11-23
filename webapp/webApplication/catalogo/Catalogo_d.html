@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      	img{
+      
+		  height:50px;
+		  width:50px;
+		  
+ 		}  
+ 		
+ 		#container1{
+      
+		  height: 1000px;
+		  width: 100%;
+		  background:rgb(49,153,251);
+		  color:white;  
+		  z-index:1;
+         
+       }
+      
+      #cabecera{
+      
+         position:relative;
+			height: 30%;
+		   background:rgb(49,153,251);
+		   color:white;  
+		   z-index:4;
+         
+        }
+        
+      #campoContenido{
+      
+          position: relative;
+          height: 55%;
+          width: 100%;
+      	  z-index:2;
+      	  
+      }
+     
+      #campoCentral{
+      
+         position: relative;
+         overflow-y:scroll;
+         overflow-x:scroll;
+         float: left;
+		padding-left=1%;
+  
+		width: 80%;
+        height: 100%;
+        z-index:3;
+      
+      	}
+      
+      	table,tr,td{
+      
+      	z-index:3;
+      	
+      	}
+      	
+      	#lateralDer{
+      	
+	        overflow-y: scroll;
+	        position:relative;
+	        float: left;
+	        padding: 1%;
+	        width: 20%;
+	        height: 100%;
+	        background:rgb(49,153,251);
+	     	color:white;  
+	        z-index:3;
+       
+        }
+      
+      	#pieDePag{
+        
+	        position:relative;
+	        width:100%;
+	        height:15%;
+	        color:rgb(210,210,210); 
+	        background-color: rgb(26,26,26);
+	        z-index:2;
+        
+      	}
+      
+  		#lateralDer  img{
+        
+         	height: 50%;
+         	width: 50%;
+      
+      	}
+      
+      	#cabecera img{
+          
+        	height: 60%;
+         	width: 100%;  
+      	}
+          
+      	#pieCliente{
+          	
+          	position: relative;
+          	float: left;
+          	width: 33%;
+          	padding: 1%;
+          	height: 100%;
+           	border-left-style: solid;
+           	border-left-width: thin;
+           	border-left-color: white; 
+           	border-right-style: solid;
+           	border-right-width: thin;
+           	border-right-color: white; 
+            background:rgb(49,153,251);
+     		color:white; 
+     		z-index:3;
+      	}
+      
+      	#pieEnlace{
+        
+	        float: left;
+	        width: 33%;
+	        padding: 1%;
+	        height: 100%;
+         	border-right-style: solid;
+           	border-right-width: thin;
+           	border-right-color: white;     
+           	background:rgb(49,153,251);
+     		color:white;
+     		z-index:3;
+      }
+      
+      #pieEnlace a{
+         
+         	color:white;
+      
+      }
+      
+      #pieCredito{
+          
+          	float: left;
+           	width: 33%;
+          	padding: 1%;
+          	height: 100%;
+          	font: small;
+   			border-right-style: solid;
+           	border-right-width: thin;
+           	border-right-color: white; 
+           	background:rgb(49,153,251);
+     		color:white;
+         	z-index:3;   
+      
+      }
+      
+      #pieCliente img{
+      
+	        height: 50%;
+	        width: 20%;
+	        float:left;
+	        padding-left: 5%;
+	        background:rgb(49,153,251);
+     	    color:white;
+      
+      }
+   
+   		.popup{
+   		
+   			cursor:pointer;
+   		}
+ 
+ 		#show{
+		
+			 visibility:hidden;
+			 position:absolute;
+			 width:100%;
+			 height:200%;
+			 z-index:5;
+			 background:rgba(0,0,0,0.6);
+	    }
+	    
+ 		#show div{
+			 
+			 position:relative;
+			 top:220px;
+			 left:300px;
+			 height:250px;
+			 width:420px;
+			 padding:20px;
+			 background:rgba(0,0,0,0.5);
+	    
+	    }
+ 
+ 		#show img{
+ 
+			 height: 100%;
+			 width:40%;
+	    }
+	    
+ 		#empresa{
+ 
+			 position:relative;
+			 padding-left:20px;
+
+ 		}
+ 
+ 
+    </style>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/2-col-portfolio.css" rel="stylesheet">
+<body>
+	<div id='show'>	
+		<div>
+			<table>
+				<tr>
+					<td><img src="../images/images.jpeg"/></td>
+					<td style="color:rgb(200,200,200);">Descripcion:<br>
+					contenido 250 ml<br>
+        			para ropa blanca<br>
+        			utilice lavadora<br><p>
+						Precio<h4><strong>$50.000.oo</strong></h4>
+
+						<p><input id="bt1" type="button" value="pagar"/>
+					
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+ <div id="container1">
+ 	<div id="cabecera">
+       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        	<div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            	<div class="navbar-header">
+                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                	</button>
+                	<a class="navbar-brand" href="../index.html">Inicio</a>
+            	</div>
+            	<!-- Collect the nav links, forms, and other content for toggling -->
+            		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                		<ul class="nav navbar-nav">
+                    		<li>
+                        		<a href="#">Mapa</a>
+                    		</li>
+                    		<li>
+                        		<a href="#">Promocion</a>
+                    		</li>
+                    		<li>
+                        		<a href="#">Contacto</a>
+                    		</li>
+                		</ul>
+            		</div>
+            <!-- /.navbar-collapse -->
+        		</div>
+        <!-- /.container -->
+    		</nav>
+    
+			<img id="banner" src="../images/images.jpeg"/>
+
+    </div>
+    <div id="campoContenido">
+     	<div id='empresa' style="padding-left:30%; width:70%;">
+     	<h2>Catalogo de productos miprograma 2015</h2>
+     	  </div>
+			<div id="campoCentral">
+				<table>
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+       			<tr class="row" >
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+           			<td class="col-md-3 portfolio-item"><img class='popup' src="../images/images.png"/></td>
+  				</tr>
+ 
+		</table>
+
+ 	</div>
+ 
+ 		<div id="lateralDer">
+	 		<p><h4>Sucursal Ave 19.<br>
+	        <img src="../images/images (1).jpeg" alt=""/><br>
+	        <small style='color:white'>Calle 19 C - 3, Bogota, Colombia<br>Horarios de atencion: <br>
+	         lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4> <p>
+	         <h4 >Sucursal Parque bavaria.<br>
+	         <img src="../images/images-2.jpeg" alt=""/><br>
+	         <small style='color:white'>Parque Bavaria<br>Horarios de atencion: <br>
+	         lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4>
+	          <p><h4>Sucursal Ac6.<br>
+	         <img src="../images/images-3.jpeg" alt=""/><br>
+	          <small style='color:white'>ac6 # 17-08<br>Horarios de atencion: <br>
+	         lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4>  
+	 
+ 		</div>
+ 	</div>
+ 
+ <div id="pieDPag">
+ 	
+ 	<div id='pieCliente'>
+ 		<strong>Nuestros clientes</strong><p>
+               	<img  src="../images/images (1).jpeg" alt=""/>
+                <img  src="../images/images (1).jpeg" alt=""/>
+                <img src="../images/images (1).jpeg" alt=""/>
+                <img  src="../images/images (1).jpeg" alt=""/>
+ 
+ 	</div>
+
+ 	<div id='pieEnlace'>
+ 		<strong>Enlaces de interes</strong><p>
+               <a href="http://www.uniandes.edu.co/">recursos y capacitaciones</a><br>
+               <a href="https://moodleinstitucional.uniandes.edu.co/login/index.php">consultas interactivas y foros</a><br>
+               <a href="sicuaplus.uniandes.edu.co">talleres y evaluaciones</a><br>
+               <a href="labsis.uniandes.edu.co">laboratorios de calidad y desarrolo de productos</a>
+ 	</div>
+ 
+ 	<div id='pieCredito'>
+ 		<strong>Creditos</strong><p>
+             Alejandro Quintero<br>Juan David Poveda<br>Ernesto Nobmanm<br>Copyright 2015 
+ 	</div>
+ </div>
+</div>  
+    
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.popup').click(function(){
+				$('#show').css('visibility','visible');
+			});
+			
+			$('#show').click(function(){
+				$('#show').css('visibility','hidden');
+			});
+		});
+
+	</script>
+
+</body>
+
+</html>
+

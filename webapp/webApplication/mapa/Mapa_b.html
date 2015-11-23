@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+    
+    	img{
+    	
+    		height:300px;
+    		width:200px;
+    	
+    		}
+    		  
+     	#container1{
+        
+        	height: 1000px;
+          	width: 100%;
+          	background:white;
+     		color:rgb(49,153,251);  
+         
+      		}
+      		
+      	#cabecera{
+        
+        	position:relative;
+			
+			height: 20%;
+          	background:white;
+     		color:rgb(49,153,251);  
+          
+      		}
+      		
+     	#campoContenido{
+	        
+	        position: relative;
+	        height: 55%;
+	        width: 100%;
+	        
+      		}
+      		
+      #lateralIzq{
+		    
+		    position: relative;
+		    float: left;
+		    padding: 1%;
+		    width: 20%;
+		    height: 100%;
+		    background:white;
+     		color:rgb(49,153,251); 
+         
+      		}
+      		
+      #campoCentral{
+      
+         	position: relative;
+         	float: left;
+  		width: 55%;
+          	height: 100%;
+         
+          
+      		}
+      
+      	#lateralDer{
+        
+		    overflow-y: scroll;
+		    position:relative;
+		    float: left;
+		    padding: 1%;
+		    width: 25%;
+		    height: 100%;
+         	background:white;
+     		color:rgb(49,153,251);  
+       
+      		}
+      
+      	#pieDePag{
+        
+        	position:relative;
+          	height:15%;
+          	color:rgb(210,210,210); 
+          	background-color: rgb(26,26,26);
+      
+      		}
+     
+      	#map{
+       
+       		height: 100%;
+        	color:black; 
+      		
+      		}
+      
+        #lateralDer  img{
+        
+	         height: 50%;
+	         width: 50%;
+	         
+      		}
+      		
+      	#cabecera img{
+          
+        	height: 100%;
+         	width: 100%;  
+      		
+      		}
+          
+      	#pieCliente{
+        	
+        	position: relative;
+          	float: left;
+          	width: 33%;
+          	padding: 1%;
+          	height: 100%;
+           	border-left-style: solid;
+           	border-left-width: thin;
+           	border-left-color: rgb(100,100,100);
+           	border-right-style: solid;
+           	border-right-width: thin;
+           	border-right-color: rgb(100,100,100);
+            background:white;
+     		color:rgb(49,153,251); 
+      		
+      		}
+      
+      	#pieEnlace{
+          
+          	float: left;
+          	width: 33%;
+          	padding: 1%;
+          	height: 100%;
+            border-right-style: solid;
+           	border-right-width: thin;
+           	border-right-color: rgb(100,100,100);
+            background:white;
+     		color:rgb(49,153,251);
+      		
+      		}
+      
+      	#pieEnlace a{
+          
+          	color:rgb(49,153,251);
+      
+      		}
+      
+      	#pieCredito{
+        
+          	float: left;
+           	width: 33%;
+          	padding: 1%;
+          	height: 100%;
+          	font: small;
+            border-right-style: solid;
+           	border-right-width: thin;
+           	border-right-color: rgb(100,100,100);
+           	background:white;
+    	 	color:rgb(49,153,251);
+            
+     	 	}
+      
+      	#pieCliente img{
+        
+          	height: 50%;
+          	width: 20%;
+          	float:left;
+          	padding-left: 5%;
+          	background:white;
+     		color:rgb(49,153,251);
+      
+      		}
+     
+    </style>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/2-col-portfolio.css" rel="stylesheet">
+  </head>
+  <body>
+    
+   <div id="container1">
+       <div id="cabecera">
+           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        		<div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            		<div class="navbar-header">
+                		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    	<span class="sr-only">Toggle navigation</span>
+                    	<span class="icon-bar"></span>
+                    	<span class="icon-bar"></span>
+                    	<span class="icon-bar"></span>
+                		</button>
+                		<a class="navbar-brand" href="../index.html">Inicio</a>
+            		</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                		<ul class="nav navbar-nav">
+                    		<li>
+                        		<a href="#">Catalogo</a>
+                    		</li>
+                    		<li>
+                        		<a href="#">Promocion</a>
+                    		</li>
+                    		<li>
+                        		<a href="#">Contacto</a>
+                   			</li>
+                		</ul>
+            		</div>
+            <!-- /.navbar-collapse -->
+        		</div>
+        <!-- /.container -->
+    		</nav>
+ 				<img id="banner" src="../images/images.png" alt=""/>
+       </div>
+       <hr>
+       	<div id="campoContenido">
+           <div id="lateralIzq">
+               <h3><strong>Sucursales</strong></h3><hr><p>
+        		<p><h4>Sucursal Ave 19.<br>
+            	<small style='color:rgb(49,153,251)'>Calle 19 C - 3, Bogotá, Colombia<br>Horarios de atencion: <br>
+                lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4> <p>
+            	<h4>Sucursal Parque bavaria.<br>
+            	<small style='color:rgb(49,153,251)'>Parque Bavaria<br>Horarios de atencion: <br>
+                lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4>
+                <p>
+             	<h4>Sucursal Ac6.<br>
+            	<small style='color:rgb(49,153,251)'>ac6 # 17-08<br>Horarios de atencion: <br>
+                lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4>
+                
+           </div>
+          		<div id="campoCentral">
+              		<div id="map"></div>
+           		</div>
+           		
+  			<div id="lateralDer">
+             	<p><h4>Sucursal Ave 19.<br>
+            	<img src="../images/images (1).jpeg" alt=""/><br>
+            	<small style='color:rgb(49,153,251)'>Calle 19 C - 3, Bogota, Colombia<br>Horarios de atencion: <br>
+                lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4> <p>
+                <h4 >Sucursal Parque bavaria.<br>
+                <img src="../images/images-2.jpeg" alt=""/><br>
+            	<small style='color:rgb(49,153,251)'>Parque Bavaria<br>Horarios de atencion: <br>
+                lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4>
+                <p>
+                <h4>Sucursal Ac6.<br>
+                <img src="../images/images-3.jpeg" alt=""/><br>
+            	<small style='color:rgb(49,153,251)'>ac6 # 17-08<br>Horarios de atencion: <br>
+                lun-vie (8:00 am - 9:00pm)<br>sab-dom-fest(11:00 am - 6:00pm)</small></h4>  
+           
+       	</div>
+           
+   </div>
+       <div id="pieDePag">
+           <div id="pieCliente"><strong>Nuestros clientes</strong><p>
+               <img  src="../images/images (1).jpeg" alt=""/>
+               <img  src="../images/images (1).jpeg" alt=""/>
+               <img src="../images/images (1).jpeg" alt=""/>
+               <img  src="../images/images (1).jpeg" alt=""/>
+           </div>
+      	   <div id="pieEnlace"><strong>Enlaces de interes</strong><p>
+               <a href="http://www.uniandes.edu.co/">recursos y capacitaciones</a><br>
+               <a href="https://moodleinstitucional.uniandes.edu.co/login/index.php">consultas interactivas y foros</a><br>
+               <a href="sicuaplus.uniandes.edu.co">talleres y evaluaciones</a><br>
+               <a href="labsis.uniandes.edu.co">laboratorios de calidad y desarrolo de productos</a>
+     	  </div>
+          <div id="pieCredito"><strong>Creditos</strong><p>
+               Alejandro Quintero<p>Juan David Poveda<p>Ernesto Nobmanm<p>Copyright 2015 
+          </div>
+       </div>
+   </div>
+   
+    <script>
+    
+         var map;
+         var initialLocation;
+         var marker0;
+
+		function initMap() {
+ 
+  	    map = new google.maps.Map(document.getElementById('map'), {
+    	zoom: 15
+   		
+   		});
+     	if(navigator.geolocation) {
+   			
+   			navigator.geolocation.getCurrentPosition(function(position) {
+     		initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      		map.setCenter(initialLocation);
+      		marker0 = new google.maps.Marker({
+    		position: initialLocation,
+    		map: map,
+        	icon:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+    		title: '5'
+  			
+  			}); 
+  
+    	var infowindow=new google.maps.InfoWindow;
+ 		var initialLocStr =initialLocation.toString();
+  		var initialLocArray=initialLocStr.split(',',2);
+  		initialLocArray[0]=initialLocArray[0].replace('(','');
+  		initialLocArray[1]=initialLocArray[1].replace(')','');
+ 		var geocoder = new google.maps.Geocoder;
+ 
+ 		var latlng = {
+ 		
+ 		lat: parseFloat(initialLocArray[0]), 
+ 		lng: parseFloat(initialLocArray[1])
+ 		
+ 		};
+  
+        geocoder.geocode(
+        	
+        	{'location': latlng}, 
+        	function(results, status) {
+    			if (status === google.maps.GeocoderStatus.OK) {
+      				if (results[1]) {
+        				
+        				map.setZoom(11);
+        				infowindow.setContent('<div  style="width:120px;"><h3>Usted esta aqui</h3>'+results[1].formatted_address+'</div>');
+   
+							marker0.addListener('click',function(){infowindow.open(map, this);});
+			
+      				  } 
+    				} 
+  				});
+  
+    		});
+  		}
+
+ 
+   	var myLatLng = {
+   	
+   	lat:4.61703,
+   	lng:-74.07076
+   	
+   	};
+   
+   	var geocoder1 = new google.maps.Geocoder; 
+ 
+     geocoder1.geocode(
+     	{'location': myLatLng}, 
+     	function(results, status) {
+    		if(status === google.maps.GeocoderStatus.OK) {
+      			if (results[1]) {
+        			map.setZoom(11);
+        			var marker = new google.maps.Marker({
+    					position: myLatLng,
+    					map: map,
+    					title: '4'
+  					});
+  					
+       var infowindow1=new google.maps.InfoWindow;
+           infowindow1.setContent(results[1].formatted_address);
+ 		
+		marker.addListener('click',function(){infowindow1.open(map, this);});
+      } 
+    } 
+  });
+  
+  		var myLatLng1 = {lat: 4.59008, lng: -74.07316};
+  		var geocoder2 = new google.maps.Geocoder; 
+  			geocoder2.geocode({'location': myLatLng1}, function(results, status) {
+    			if (status === google.maps.GeocoderStatus.OK) {
+      				if (results[1]) {
+       			 		map.setZoom(11);
+      			 		var marker1 = new google.maps.Marker({
+    			 			position: myLatLng1,
+    			 			map: map,
+    			 			title: '3'
+    
+  							});
+  							
+  						var infowindow2=new google.maps.InfoWindow;
+  	  						infowindow2.setContent(results[1].formatted_address);
+        		marker1.addListener('click',function(){infowindow2.open(map, this);});
+      } 
+    } 
+  });
+  
+  		var myLatLng2 = {lat: 4.60873, lng: -74.07634};
+   		var geocoder3 = new google.maps.Geocoder; 
+  
+     	geocoder3.geocode(
+     	{'location': myLatLng2},
+     	 function(results, status) {
+    			if (status === google.maps.GeocoderStatus.OK) {
+      				if (results[1]) {
+        				map.setZoom(11);
+      					var marker2 = new google.maps.Marker({
+    						position: myLatLng2,
+    						map: map,
+    						title: '2',
+    
+  		});
+  		
+       var infowindow3=new google.maps.InfoWindow;
+       infowindow3.setContent(results[1].formatted_address);
+      		marker2.addListener('click',function(){infowindow3.open(map, this);});
+      } 
+    } 
+  });  
+} 
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt_uQfUfa11Rj-gOHoCP_kNX1O2JfaBRk&signed_in=true&callback=initMap"
+        async defer>
+    </script>
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html> 
+
+
+
